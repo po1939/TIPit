@@ -6,5 +6,32 @@
              mc:Ignorable="d"
              x:Class="TIPit.MainPage">
 
+    <StackLayout Margin="0,70,0,0" VerticalOptions="FillAndExpand">
+
+        <Label HorizontalOptions="Center" VerticalOptions="FillAndExpand" Text="TIPit+"/>
+        <Label HorizontalOptions="Center" VerticalOptions="FillAndExpand" Text="$100.00"/>
+
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Label HorizontalOptions="Center" Text="PERCENT"/>
+            <Slider Margin="30" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Label HorizontalOptions="Center" Text="SPLIT"/>
+            <Slider Margin="30" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout Margin="20" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand">
+                <Label HorizontalOptions="Start" Text="TIP:"/>
+                <Label HorizontalOptions="Start" Text="$20.00"/>
+            </StackLayout>
+            <StackLayout Margin="20" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand">
+                <Label HorizontalOptions="End" Text="TOTAL:"/>
+                <Label HorizontalOptions="End" Text="$120.00"/>
+            </StackLayout>
+        </StackLayout>
+
+    </StackLayout>
 
 </ContentPage>
