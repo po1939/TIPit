@@ -5,33 +5,62 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TIPit.MainPage">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<StackLayout Margin="0,0,0,0" >
 
-    <StackLayout Margin="0,70,0,0" VerticalOptions="FillAndExpand">
+			<!--Title-->
+			<Label HorizontalOptions="Center" VerticalOptions="FillAndExpand" Text="TIPit+"/>
 
-        <Label HorizontalOptions="Center" VerticalOptions="FillAndExpand" Text="TIPit+"/>
-        <Label HorizontalOptions="Center" VerticalOptions="FillAndExpand" Text="$100.00"/>
+			<!--Enter price-->
+			<Entry x:Name="PriceEntry" Keyboard="Numeric" Placeholder="$0" TextChanged="PriceEntry_TextChanged" HorizontalOptions="Center" WidthRequest="100" VerticalOptions="FillAndExpand"/>
 
-        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-            <Label HorizontalOptions="Center" Text="PERCENT"/>
-            <Slider Margin="30" HorizontalOptions="FillAndExpand"/>
-        </StackLayout>
+			<!--Percent Slider-->
+			<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+				<Label HorizontalOptions="Center" Text="PERCENT"/>
+				<Label x:Name="PercentText" Text="0" Margin="0,30,0,0" HorizontalOptions="Start" FontSize="Micro" HorizontalTextAlignment="Center" VerticalOptions="EndAndExpand">
+					<Label.Margin>
+						<OnPlatform x:TypeArguments="Thickness">
+							<On Platform="iOS" Value="15,0" />
+							<On Platform="Android" Value="43,0" />
+						</OnPlatform>
+					</Label.Margin>
+				</Label>
+				<Slider x:Name="PercentSlider" Minimum="0" Maximum="100" MinimumTrackColor="Black" Margin="30,0" HorizontalOptions="Fill" ValueChanged="PercentSlider_ValueChanged"/>
+			</StackLayout>
 
-        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-            <Label HorizontalOptions="Center" Text="SPLIT"/>
-            <Slider Margin="30" HorizontalOptions="FillAndExpand"/>
-        </StackLayout>
+			<!--Split Slider-->
+			<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+				<Label HorizontalOptions="Center" Text="SPLIT"/>
+				<Label x:Name="SplitText" Text="0" Margin="0,30,0,0" HorizontalOptions="Start" FontSize="Micro" HorizontalTextAlignment="Center" VerticalOptions="EndAndExpand">
+					<Label.Margin>
+						<OnPlatform x:TypeArguments="Thickness">
+							<On Platform="iOS" Value="15,0" />
+							<On Platform="Android" Value="43,0" />
+						</OnPlatform>
+					</Label.Margin>
+				</Label>
+				<Slider x:Name="SplitSlider" Minimum="0" Maximum="100" MinimumTrackColor="Black" Margin="30,0" HorizontalOptions="Fill" ValueChanged="SplitSlider_ValueChanged"/>
+			</StackLayout>
 
-        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <StackLayout Margin="20" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand">
-                <Label HorizontalOptions="Start" Text="TIP:"/>
-                <Label HorizontalOptions="Start" Text="$20.00"/>
-            </StackLayout>
-            <StackLayout Margin="20" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand">
-                <Label HorizontalOptions="End" Text="TOTAL:"/>
-                <Label HorizontalOptions="End" Text="$120.00"/>
-            </StackLayout>
-        </StackLayout>
+			<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+				
+				<!--Tip-->
+				<StackLayout Margin="20" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand">
+					<Label HorizontalOptions="Start" Text="TIP:"/>
+					<Label x:Name="TipLabel" HorizontalOptions="Start" Text="$0.00"/>
+				</StackLayout>
+				
+				<!--Total-->
+				<StackLayout Margin="20" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand">
+					<Label HorizontalOptions="End" Text="TOTAL:"/>
+					<Label x:Name="TotalLabel" HorizontalOptions="End" Text="$0.00"/>
+				</StackLayout>
+			</StackLayout>
 
-    </StackLayout>
-
+		</StackLayout>
+	</Grid>
 </ContentPage>
