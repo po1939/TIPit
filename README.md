@@ -4,10 +4,10 @@
 Tip calculator and splitter  
   
 More features to come:
--[] Save bills
--[] Keep track of who paid you
-  -[] Notification to remind you about it
--[] Request money
+-[ ] Save bills
+-[ ] Keep track of who paid you
+  -[ ] Notification to remind you about it
+-[ ] Request money
 
   
 <kbd>
