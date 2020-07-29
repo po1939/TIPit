@@ -1,1 +1,3 @@
 # TIPit
+
+![Screenshot](screenshot.png)
