@@ -1,3 +1,3 @@
 # TIPit
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.png | width=100)
