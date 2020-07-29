@@ -3,6 +3,7 @@
 
 Tip calculator and splitter  
   
+    
 More features to come:  
 - [ ] Save bills  
 - [ ] Keep track of who paid you  
